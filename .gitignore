@@ -1,0 +1,64 @@
+# Rust 构建产物
+/target/
+**/*.rs.bk
+*.pdb
+
+# Cargo 锁文件（对于库项目通常忽略，但对于二进制项目保留）
+# Cargo.lock
+
+# IDE 和编辑器文件
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 系统文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 日志文件
+*.log
+
+# 临时文件
+*.tmp
+*.temp
+
+# 测试覆盖率报告
+coverage/
+tarpaulin-report.html
+
+# 文档生成
+/doc/
+/docs/target/
+
+# 容器相关临时文件
+/containers/
+/runtime/
+/.fire/
+
+# 测试产物
+/test-containers/
+/tmp/test-*
+
+# 环境变量文件
+.env
+.env.local
+
+# 备份文件
+*.bak
+*.backup
+
+# 压缩文件
+*.tar.gz
+*.zip
+*.7z
+
+# 本地配置文件
+local.toml
+config.local.toml

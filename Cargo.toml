@@ -1,0 +1,39 @@
+[package]
+name = "fire"
+version = "1.0.0"
+authors = ["wu-eee"]
+description = "Fire 容器运行时 - 一个轻量级的 OCI 兼容容器运行时"
+license = "GPL-2.0"
+repository = "https://github.com/wu-eee/fire"
+homepage = "https://github.com/wu-eee/fire"
+documentation = "https://docs.rs/fire"
+readme = "README.md"
+keywords = ["container", "runtime", "oci", "linux"]
+categories = ["virtualization", "development-tools"]
+build = "build.rs"
+edition = "2021"
+
+[dependencies]
+caps = "0.5"
+clap = { version = "4.0", features = ["derive"] }
+anyhow = "1.0"
+lazy_static = "1.4"
+libc = "0.2"
+log = "0.4"
+env_logger = "0.10"
+nix = { version = "0.27", features = ["sched", "process", "signal", "fs", "user"] }
+num-traits = "0.2"
+oci = { path = "oci" }
+prctl = "1.0"
+scopeguard = "1.1"
+seccomp-sys = "0.1"
+thiserror = "1.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+
+[features]
+nightly = []
+
+[profile.release]
+lto = true
+panic = 'abort'
